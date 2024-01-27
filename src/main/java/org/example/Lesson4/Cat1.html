@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 50px 0;
+    }
+
+    #gallery-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #large-image {
+        width: 70%;
+        border: 2px solid #000000;
+    }
+
+    #thumbnail-list {
+        margin-top: 100px;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        margin: 0 50px;
+        cursor: pointer;
+    }
+
+    .thumbnail img {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #ff0000;
+    }
+</style>
+<title>Image Gallery</title>
+</head>
+<body>
+
+<h1>Cats Gallery</h1>
+
+<div id="gallery-container">
+    <iframe id="large-image" src="image1.jpg" frameborder="0" allowfullscreen></iframe>
+
+    <ul id="thumbnail-list">
+        <li class="thumbnail" onclick="changeImage('image1.jpg')">
+            <img src="data:image/jpeg;base64,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" alt="Thumbnail 1">
+        </li>
+        <li class="thumbnail" onclick="changeImage('image2.jpg')">
+            <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg" alt="Thumbnail 2">
+        </li>
+        <li class="thumbnail" onclick="changeImage('image3.jpg')">
+            <img src="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-on-couch_23-2150782445.jpg" alt="Thumbnail 3">
+        </li>
+    </ul>
+</div>
+
+<script>
+    function changeImage(imageSrc) {
+        document.getElementById('large-image').src = imageSrc;
+    }
+</script>
+
+</body>
+</html>
