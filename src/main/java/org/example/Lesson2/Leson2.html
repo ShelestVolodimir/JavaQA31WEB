@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .subscription-plan {
+            width: 150px;
+            height: 150px;
+            background-color: #db347a;
+            color: #000000;
+            text-align: center;
+            line-height: 150px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 1s ease; /* Плавний перехід для всіх властивостей протягом 1 секунди */
+        }
+
+        .subscription-plan:hover {
+            width: 180px;
+            height: 180px;
+        }
+    </style>
+    <title>Subscription Plans</title>
+</head>
+<body>
+<div class="subscription-plan">Basic</div>
+<div class="subscription-plan">Standard</div>
+<div class="subscription-plan">Premium</div>
+</body>
+</html>
